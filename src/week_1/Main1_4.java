@@ -1,6 +1,6 @@
 package week_1;
 
-public class Main1_4 {
+public class Main1_4 { //연산 결과가 최댓값이 되게 하는 함수
     public static int solution(int[] arr) {
         int answer = 0;
 
