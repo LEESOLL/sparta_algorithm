@@ -22,7 +22,6 @@ public class Main1_6 { //소수 나열하기
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        for(int x : solution(n))
-            System.out.print(x+" ");
+        System.out.println(solution(n));
     }
 }
