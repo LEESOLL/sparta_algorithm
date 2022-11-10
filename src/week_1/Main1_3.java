@@ -1,6 +1,6 @@
 package week_1;
 
-public class Main1_3 {
+public class Main1_3 { //해당 숫자 있는지 판멸해주는 함수
     public static boolean solution(int n, int[] arr) {
         boolean answer = false;
 
