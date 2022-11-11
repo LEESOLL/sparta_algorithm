@@ -2,7 +2,7 @@ package week_3;
 
 import java.util.Arrays;
 
-public class Main3_4 { //정렬을 마친 배열의 병합 정렬 구현하기
+public class Main3_4 { //정렬을 마친 배열의 정렬 구현하기
     public static int[] merge(int[] a, int[] b) {
         int[] c = new int[a.length + b.length];
         int a_index = 0;
