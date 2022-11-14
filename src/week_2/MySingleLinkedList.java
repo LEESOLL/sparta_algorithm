@@ -101,6 +101,7 @@ public class MySingleLinkedList<T> {
         return p;
     }
 
+
     public T get(int index) { //index번째 노드에 저장된 데이터를 반환한다
         if(index < 0 || index >= size)
             return null;
@@ -109,5 +110,11 @@ public class MySingleLinkedList<T> {
 //            p = p.next;
 //        return p.data;
         return getNode(index).data;
+    }
+
+    public T getFromLast(int index) { //뒤에서부터 index번째 노드에 저장된 데이터를 반환한다
+        if(index < 0 || index >= size)
+            return null;
+        return getNode(size - index).data;
     }
 }
