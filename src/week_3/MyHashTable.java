@@ -2,20 +2,20 @@ package week_3;
 import java.util.LinkedList;
 
 class MyHashTable { //해쉬테이블 구현하기
-    class Node {
+    class Node { //키와 밸류 값을 가진 노드클래스 생성
         String key;
         String value;
 
-        public Node(String key, String value) {
+        public Node(String key, String value) { //노드클래스의 생성자
             this.key = key;
             this.value = value;
         }
 
         String getValue() {
             return value;
-        }
+        } //getter함수
 
-        void setValue(String value) {
+        void setValue(String value) { //setter함수
             this.value = value;
         }
     }
@@ -25,8 +25,9 @@ class MyHashTable { //해쉬테이블 구현하기
     MyHashTable(int size) { //생성자
         this.data = new LinkedList[size]; //생성과 동시에 크기가 size인 linkedlist형 배열 data 생성(= 리스트를 담는 배열)
     }
+    // MyHashTable 생성자
 
-    int getHashCode(String key) {
+    int getHashCode(String key) { //key를 해쉬코드로 변환시키는 메서드
         int hashcode = 0;
         for (char c : key.toCharArray()) {
             hashcode += c; //key의 각 문자를 아스키코드로 변환 후 다 더해줌
@@ -38,7 +39,7 @@ class MyHashTable { //해쉬테이블 구현하기
         return hashcode % data.length; //hashcode를 data배열의 길이만큼 나눠서 인덱스값 구함
     }
 
-    Node searchKey(LinkedList<Node> list, String key) {
+    Node searchKey(LinkedList<Node> list, String key) { //key값을 가지는 노드 탐색 시 해당 노드 반환해주는 메서드
         if (list == null) return null;
         for (Node node : list) {
             if (node.key.equals(key)) {
